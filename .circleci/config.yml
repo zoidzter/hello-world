@@ -17,7 +17,7 @@ jobs:
       - persist_to_workspace:
           root: $CIRCLE_WORKING_DIRECTORY/ws
           paths:
-           - $CIRCLE_WORKING_DIRECTORY/output.txt
+           - $CIRCLE_WORKING_DIRECTORY/*
     
   read_hello_from_file:
     docker:
