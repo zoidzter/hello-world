@@ -13,7 +13,7 @@ jobs:
       - run:
           name: outputhello
           command: |
-            echo "HELLO from circleCI to: " $FIRSTENVVAR > $CIRCLE_WORKING_DIRECTORY/output.txt
+            echo "HELLO from circleCI to:  $FIRSTENVVAR" > $CIRCLE_WORKING_DIRECTORY/output.txt
       - persist_to_workspace:
           root: $CIRCLE_WORKING_DIRECTORY/ws
           paths:
