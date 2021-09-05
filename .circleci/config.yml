@@ -24,11 +24,11 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - attach_workspace:
-          at: ~/ws/output.txt
+          at: ~/ws
       - run:
           name: readhello
           command: |
-            echo `cat ~/output.txt`
+            echo `cat ~/ws/output.txt`
         
 # Orchestrate or schedule a set of jobs
 workflows:
