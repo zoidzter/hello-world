@@ -24,7 +24,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - attach_workspace:
-          at: $CIRCLE_WORKING_DIRECTORY/ws
+          at: $CIRCLE_WORKING_DIRECTORY/ws/
       - run:
           name: readhello
           command: |
