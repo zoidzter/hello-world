@@ -28,7 +28,7 @@ jobs:
       - run:
           name: readhello
           command: |
-            echo `cat $CIRCLE_WORKING_DIRECTORY/output.txt`
+            cat $CIRCLE_WORKING_DIRECTORY/ws/output.txt
         
 # Orchestrate or schedule a set of jobs
 workflows:
