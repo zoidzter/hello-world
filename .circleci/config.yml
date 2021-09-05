@@ -13,22 +13,22 @@ jobs:
       - run:
           name: outputhello
           command: |
-            echo "HELLO from circleCI to: " $FIRSTENVVAR > /tmp/output.txt
+            echo "HELLO from circleCI to: " $FIRSTENVVAR > $CIRCLE_WORKING_DIRECTORY/output.txt
       - persist_to_workspace:
-          root: ~/ws
+          root: $CIRCLE_WORKING_DIRECTORY/ws
           paths:
-           - /tmp/output.txt
+           - $CIRCLE_WORKING_DIRECTORY/output.txt
     
   read_hello_from_file:
     docker:
       - image: circleci/node:13.8.0
     steps:
       - attach_workspace:
-          at: ~/ws
+          at: $CIRCLE_WORKING_DIRECTORY/ws
       - run:
           name: readhello
           command: |
-            echo `cat ~/output.txt`
+            echo `cat $CIRCLE_WORKING_DIRECTORY/output.txt`
         
 # Orchestrate or schedule a set of jobs
 workflows:
