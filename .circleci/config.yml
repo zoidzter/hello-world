@@ -13,11 +13,11 @@ jobs:
       - run:
           name: outputhello
           command: |
-            echo "HELLO from circleCI to: " $FIRSTENVVAR > ~/output.txt
+            echo "HELLO from circleCI to: " $FIRSTENVVAR > /tmp/output.txt
       - persist_to_workspace:
           root: ~/ws
           paths:
-           - ~/output.txt
+           - /tmp/output.txt
     
   read_hello_from_file:
     docker:
