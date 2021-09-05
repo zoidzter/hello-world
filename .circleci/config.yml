@@ -37,4 +37,6 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - print_hello_to_file
-      - read_hello_from_file
+      - read_hello_from_file:
+          requires:
+            print_hello_to_file
