@@ -19,16 +19,16 @@ jobs:
           paths:
            - ~/output.txt
     
-    read_hello_from_file:
-      docker:
-        - image: circleci/node:13.8.0
-      steps:
-        - attach_workspace:
-          at: ~/output.txt
-        - run:
-            name: readhello
-            command: |
-              echo `cat ~/output.txt`
+  read_hello_from_file:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - attach_workspace:
+        at: ~/output.txt
+      - run:
+          name: readhello
+          command: |
+            echo `cat ~/output.txt`
         
 # Orchestrate or schedule a set of jobs
 workflows:
