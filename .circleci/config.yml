@@ -15,7 +15,7 @@ jobs:
           command: |
             echo "HELLO from circleCI" > $CIRCLE_WORKING_DIRECTORY/output.txt
       - persist_to_workspace:
-          root: $CIRCLE_WORKING_DIRECTORY/ws
+          root: $CIRCLE_WORKING_DIRECTORY/ws/
           paths:
            - $CIRCLE_WORKING_DIRECTORY/*
     
