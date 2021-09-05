@@ -28,7 +28,7 @@ jobs:
       - run:
           name: readhello
           command: |
-            echo `cat ~/ws/output.txt`
+            echo `cat ~/output.txt`
         
 # Orchestrate or schedule a set of jobs
 workflows:
