@@ -39,4 +39,4 @@ workflows:
       - print_hello_to_file
       - read_hello_from_file:
           requires:
-            print_hello_to_file
+            - print_hello_to_file
