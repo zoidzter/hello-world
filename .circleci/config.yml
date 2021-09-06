@@ -9,7 +9,7 @@ command:
         type: string
         default: "no one!!"
     steps:
-      - run: echo "Hello to: " << parameters.to >>
+      - run: echo "Hello to " << parameters.to >>
     
 # Use a package of configuration called an orb.
 orbs:
@@ -24,7 +24,7 @@ jobs:
       - run:
           name: outputhello
           command: |
-            echo 'HELLO from circleCI to << parameters.to >>'  > ~/output.txt
+            
       - persist_to_workspace:
           root: ~/
           paths:
