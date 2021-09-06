@@ -24,8 +24,7 @@ jobs:
       - run:
           name: outputhello
           command: |
-            who=sayhello
-            echo "HELLO from circleCI to: $who"  > ~/output.txt
+            echo "HELLO from circleCI to: << parameters.to >>"  > ~/output.txt
       - persist_to_workspace:
           root: ~/
           paths:
