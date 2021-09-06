@@ -9,7 +9,7 @@ command:
         type: string
         default: "no one!!"
     steps:
-      - run: echo "Hello to " << parameters.to >>
+      - run: echo Hello to  << parameters.to >>
     
 # Use a package of configuration called an orb.
 orbs:
